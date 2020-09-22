@@ -53,6 +53,7 @@
       "type": "string",
       "defaultValue": "[utcNow('d')]"
     }
+    }
   },
   "variables": {
     "AppServiceType": {
