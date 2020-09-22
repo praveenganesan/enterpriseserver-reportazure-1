@@ -61,9 +61,9 @@
       "Report Server with User Management Server": "RS-UMS"
     },
     "SelectAppServiceNeedToDeploy": "[variables('AppServiceType')[parameters('SelectAppServiceNeedToDeploy')]]",
-    "templatelink": "[concat('https://raw.githubusercontent.com/syncfusion/enterpriseserver-reportazure/master/armtemplates/v4.1.0.25/',parameters('storageType'),'-ReportServer.json')]",
-    "rsGithubUrl": "https://github.com/syncfusion/enterpriseserver-reportazure.git",
-    "umsGithubUrl": "https://github.com/SyncfusionInstall/enterpriseserver-umsazure.git",
+    "templatelink": "[concat('https://raw.githubusercontent.com/praveenganesan/enterpriseserver-reportazure-1/master/armtemplates/v4.1.0.25/',parameters('storageType'),'-ReportServer.json')]",
+    "rsGithubUrl": "https://github.com/praveenganesan/enterpriseserver-reportazure-1.git",
+    "umsGithubUrl": "https://github.com/praveenganesan/enterpriseserver-umsazure.git",
     "rsReleaseVersion": "v4.1.0.25",
     "umsReleaseVersion": "v3.1.0.30",
     "appSvcPlanSkuName": "B1",
