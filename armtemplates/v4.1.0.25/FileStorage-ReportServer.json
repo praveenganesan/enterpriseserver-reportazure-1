@@ -33,6 +33,10 @@
         "Premium_LRS"
       ]
     },
+     "utcShortValue": {
+      "type": "string",
+      "defaultValue": "[utcNow('d')]"
+     },
     "BlobStorageName": {
       "maxLength": 24,
       "minLength": 3,
@@ -71,7 +75,18 @@
       "dependsOn": [],
       "tags": {
         "[concat('hidden-related:', resourceId(parameters('AppServicePlanResourceGroup'), 'Microsoft.Web/serverfarms', 'SyncfusionAppSvcPlan'))]": "Resource",
-        "displayName": "AppService"
+        "displayName": "AppService",
+        "AppName": "[resourceGroup().tags['AppName']]",
+        "Approver": "[resourceGroup().tags['Approver']]",
+        "BusinessUnit": "[resourceGroup().tags['BusinessUnit']]",
+        "Env": "[resourceGroup().tags['Env']]",
+        "HostModel": "[resourceGroup().tags['HostModel']]",
+        "Importance": "[resourceGroup().tags['Importance']]",
+        "Owner": "[resourceGroup().tags['Owner']]",
+        "Platform": "NA",
+        "ProductName": "[resourceGroup().tags['ProductName']]",
+        "Requester": "praveen.ganesan@syncfusion.com",
+        "StartDate": "[parameters('utcShortValue')]"
       },
       "properties": {
         "name": "[parameters('AppServiceName')]",
@@ -92,7 +107,18 @@
             "StorageType": "FileStorage"
           },
           "tags": {
-            "displayName": "FileAppSetting"
+            "displayName": "FileAppSetting",
+            "AppName": "[resourceGroup().tags['AppName']]",
+        "Approver": "[resourceGroup().tags['Approver']]",
+        "BusinessUnit": "[resourceGroup().tags['BusinessUnit']]",
+        "Env": "[resourceGroup().tags['Env']]",
+        "HostModel": "[resourceGroup().tags['HostModel']]",
+        "Importance": "[resourceGroup().tags['Importance']]",
+        "Owner": "[resourceGroup().tags['Owner']]",
+        "Platform": "NA",
+        "ProductName": "[resourceGroup().tags['ProductName']]",
+        "Requester": "praveen.ganesan@syncfusion.com",
+        "StartDate": "[parameters('utcShortValue')]"
           },
           "type": "config"
         },
@@ -117,7 +143,18 @@
           "name": "web",
           "properties": "[parameters('deploySiteSettings')]",
           "tags": {
-            "displayName": "Configuration"
+            "displayName": "Configuration",
+            "AppName": "[resourceGroup().tags['AppName']]",
+        "Approver": "[resourceGroup().tags['Approver']]",
+        "BusinessUnit": "[resourceGroup().tags['BusinessUnit']]",
+        "Env": "[resourceGroup().tags['Env']]",
+        "HostModel": "[resourceGroup().tags['HostModel']]",
+        "Importance": "[resourceGroup().tags['Importance']]",
+        "Owner": "[resourceGroup().tags['Owner']]",
+        "Platform": "NA",
+        "ProductName": "[resourceGroup().tags['ProductName']]",
+        "Requester": "praveen.ganesan@syncfusion.com",
+        "StartDate": "[parameters('utcShortValue')]"
           },
           "type": "config"
         }
