@@ -48,7 +48,10 @@
         "Standard_GRS",
         "Standard_RAGRS",
         "Premium_LRS"
-      ]
+      ],
+      "utcShortValue": {
+      "type": "string",
+      "defaultValue": "[utcNow('d')]"
     }
   },
   "variables": {
@@ -202,7 +205,18 @@
         "name": "[variables('appSvcPlanSkuName')]"
       },
       "tags": {
-        "displayName": "SyncfusionAppServicePlan"
+        "displayName": "SyncfusionAppServicePlan",
+	 "AppName": "[resourceGroup().tags['AppName']]",
+        "Approver": "[resourceGroup().tags['Approver']]",
+        "BusinessUnit": "[resourceGroup().tags['BusinessUnit']]",
+        "Env": "[resourceGroup().tags['Env']]",
+        "HostModel": "[resourceGroup().tags['HostModel']]",
+        "Importance": "[resourceGroup().tags['Importance']]",
+        "Owner": "[resourceGroup().tags['Owner']]",
+        "Platform": "NA",
+        "ProductName": "[resourceGroup().tags['ProductName']]",
+        "Requester": "praveen.ganesan@syncfusion.com",
+        "StartDate": "[parameters('utcShortValue')]"
       },
       "type": "Microsoft.Web/serverfarms"
     }
